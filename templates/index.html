@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediCare | Hospital Management</title><link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}"></head>
+<body><div class="app-shell">
+<aside class="sidebar"><a class="brand" href="/"><span class="brand-mark small">✚</span><span>MediCare<small>Hospital system</small></span></a>
+<div class="nav-label">WORKSPACE</div><nav id="nav">
+<button class="nav-item active" data-view="dashboard"><span>▦</span> Dashboard</button>
+<button class="nav-item" data-view="patients"><span>♙</span> Patients</button>
+<button class="nav-item" data-view="doctors"><span>✚</span> Doctors</button>
+<button class="nav-item" data-view="appointments"><span>▣</span> Appointments</button>
+<button class="nav-item" data-view="admissions"><span>▤</span> Admissions & Beds</button>
+<button class="nav-item" data-view="pharmacy"><span>⚕</span> Pharmacy</button>
+<button class="nav-item" data-view="laboratory"><span>⌕</span> Laboratory</button>
+<button class="nav-item" data-view="billing"><span>₹</span> Billing</button>
+<button class="nav-item" data-view="reports"><span>▥</span> Reports</button>
+<button class="nav-item" data-view="about"><span>ⓘ</span> PL/SQL Map</button></nav>
+<div class="sidebar-bottom"><div class="avatar">M</div><div><strong>{{ current_user }}</strong><small>{{ current_role }}</small></div><a class="logout" href="/logout" title="Sign out">↗</a></div></aside>
+<main class="main"><header class="topbar"><div><p class="eyebrow">HOSPITAL OPERATIONS / <span id="crumb">OVERVIEW</span></p><h1 id="page-title">Dashboard</h1></div><div class="top-actions"><span class="live-dot"></span><span class="muted">Local workspace</span><button class="icon-button" id="refresh-btn" title="Refresh">↻</button></div></header>
+<section id="content" class="content"><div class="loading">Loading your dashboard…</div></section>
+<footer>MEDICARE HMS <span>•</span> College mini-project powered by Oracle PL/SQL</footer></main></div>
+<div id="modal-root"></div><div id="toast-root" class="toast-root"></div>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script></body></html>

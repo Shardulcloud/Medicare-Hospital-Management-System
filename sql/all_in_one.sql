@@ -1,0 +1,4 @@
+-- Run the files in this order in SQL Developer while connected as the schema owner:
+-- 01_tables.sql, 02_sequences_indexes.sql, 03_package_specs.sql,
+-- 04_package_bodies.sql, 05_triggers.sql, 06_views.sql, 07_sample_data.sql,
+-- 08_test_script.sql. 00_create_user.sql must be run as SYSTEM separately.

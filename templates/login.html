@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediCare | Sign in</title><link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}"></head>
+<body class="login-page"><main class="login-card">
+<div class="brand-mark">✚</div><p class="eyebrow">HOSPITAL OPERATIONS</p><h1>Welcome to MediCare</h1>
+<p class="muted">Sign in to manage patients, appointments and billing.</p>
+{% if db_message %}<div class="alert">{{ db_message }}</div>{% endif %}
+<form method="post" action="/login">
+<label>Username<input name="username" autocomplete="username" required placeholder="e.g. admin"></label>
+<label>Password<input name="password" type="password" autocomplete="current-password" required placeholder="Enter password"></label>
+<button class="primary full" type="submit">Sign in <span>→</span></button>
+</form><p class="tiny muted">Oracle connection: configured in <code>config.py</code></p>
+</main></body></html>
